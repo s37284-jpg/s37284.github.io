@@ -2,69 +2,61 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
-<style>
-body {
-background-color: #FFAEC9; color: #333;
-text-align: center; padding: 50px;
-
-}
-.card {
-background: pink; border-radius: 100px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
-
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
-</head>
-<body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีค่ะ! ดิฉันชื่อ <strong>โชติรส คนชม(chotiros khonchom)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้านFaculty of Law</p>
-<p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gradient Popup Button</title>
+<title>หน้าแนะนำตัวของฉัน</title>
 
 <style>
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f5f7fa;
+    background-color: #ffd6e7; /* ชมพูอ่อน */
+    color: #333;
+    text-align: center;
+    padding: 50px;
     font-family: Arial, sans-serif;
 }
+
+/* กล่องโปรไฟล์ */
+.card {
+    background: white; /* สีขาว */
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding: 30px;
+}
+
+h1 {
+    color: #d63384;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ปุ่ม */
 .btn {
     padding: 14px 32px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #ff69b4, #ff8fab);
     color: white;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37,117,252,0.4);
+    box-shadow: 0 4px 15px rgba(255,105,180,0.4);
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37,117,252,0.6);
+    box-shadow: 0 8px 25px rgba(255,105,180,0.6);
 }
 
 .btn:active {
     transform: scale(0.95);
 }
+
+/* Popup */
 .modal {
     display: none;
     position: fixed;
@@ -73,7 +65,7 @@ body {
 }
 
 .modal-content {
-    background: white;
+    background: white; /* กล่อง Popup สีขาว */
     width: 320px;
     padding: 25px;
     border-radius: 15px;
@@ -100,7 +92,15 @@ body {
 }
 </style>
 </head>
+
 <body>
+
+<div class="card">
+    <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</h1>
+    <p>สวัสดีค่ะ! ดิฉันชื่อ <strong>โชติรส คนชม (Chotiros Khonchom)</strong></p>
+    <p>ขณะนี้กำลังศึกษา/สนใจด้าน <strong>Faculty of Law</strong></p>
+    <p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
+</div>
 
 <button class="btn" onclick="openModal()">
     🚀 Next Page
@@ -137,4 +137,3 @@ function goNext() {
 
 </body>
 </html>
-
