@@ -3,136 +3,580 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>หน้าแนะนำตัวของฉัน</title>
+
+<title>My Portfolio | โชติรส คนชม</title>
 
 <style>
-body {
-    background-color: #ffd6e7; /* ชมพูอ่อน */
-    color: #333;
-    text-align: center;
-    padding: 50px;
-    font-family: Arial, sans-serif;
+
+/* =========================
+   พื้นฐานของหน้าเว็บ
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* กล่องโปรไฟล์ */
-.card {
-    background: white; /* สีขาว */
-    border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-width: 500px;
-    margin: 0 auto 30px;
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #5f4652;
+
+    /* พื้นหลังชมพูพาสเทล */
+    background:
+        radial-gradient(circle at 15% 20%, #ffffff80 0 50px, transparent 51px),
+        radial-gradient(circle at 85% 75%, #ffffff70 0 70px, transparent 71px),
+        linear-gradient(135deg, #ffdce9, #ffeaf2, #fbd3e2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 30px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   ของตกแต่งพื้นหลัง
+========================= */
+
+.decor {
+    position: fixed;
+    color: #f4a8c3;
+    font-size: 28px;
+    opacity: 0.7;
+    animation: float 4s ease-in-out infinite;
+}
+
+.decor:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.decor:nth-child(2) {
+    top: 18%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.decor:nth-child(3) {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.decor:nth-child(4) {
+    bottom: 12%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================
+   หน้าปก
+========================= */
+
+.cover {
+    width: 100%;
+    max-width: 720px;
+
+    background: rgba(255,255,255,0.82);
+
+    border: 3px solid rgba(255,255,255,0.9);
+    border-radius: 35px;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(190, 100, 135, 0.18);
+
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+.small-title {
+    color: #d98aa7;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    color: #d63384;
+    color: #c95f87;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
-p {
+.subtitle {
+    color: #a97889;
     font-size: 18px;
-    line-height: 1.6;
+    margin-bottom: 28px;
 }
 
-/* ปุ่ม */
-.btn {
-    padding: 14px 32px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #ff69b4, #ff8fab);
-    color: white;
-    font-size: 18px;
+
+/* เส้นตกแต่ง */
+
+.line {
+    width: 100px;
+    height: 4px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #f7b6cc,
+        #d9789e,
+        #f7b6cc
+    );
+}
+
+
+/* =========================
+   รูปโปรไฟล์
+========================= */
+
+.profile-wrapper {
+    width: 170px;
+    height: 170px;
+
+    margin: 0 auto 25px;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #f6b5cb,
+        #ffffff,
+        #ef9fbb
+    );
+
+    box-shadow: 0 10px 25px rgba(201,95,135,0.2);
+}
+
+.profile-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid white;
+}
+
+
+/* =========================
+   ชื่อ
+========================= */
+
+.name {
+    color: #bd5c81;
+    font-size: 27px;
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.name-en {
+    color: #a9808f;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.faculty {
+    display: inline-block;
+
+    padding: 9px 22px;
+
+    border-radius: 50px;
+
+    background: #ffe1eb;
+
+    color: #bd6283;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   ข้อความแนะนำ
+========================= */
+
+.description {
+    color: #765b66;
+    font-size: 16px;
+    line-height: 1.8;
+
+    max-width: 520px;
+    margin: auto auto 28px;
+}
+
+
+/* =========================
+   ปุ่ม Next Page
+========================= */
+
+.btn {
+    border: none;
+
+    padding: 14px 38px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #e98eae,
+        #d96d96
+    );
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255,105,180,0.4);
+
+    box-shadow:
+        0 8px 20px rgba(217,109,150,0.3);
+
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255,105,180,0.6);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(217,109,150,0.4);
 }
 
 .btn:active {
     transform: scale(0.95);
 }
 
-/* Popup */
+
+/* =========================
+   Popup
+========================= */
+
 .modal {
     display: none;
+
     position: fixed;
+
     inset: 0;
-    background: rgba(0,0,0,0.5);
+
+    background: rgba(100,60,75,0.35);
+
+    z-index: 10;
+
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background: white; /* กล่อง Popup สีขาว */
-    width: 320px;
-    padding: 25px;
-    border-radius: 15px;
+    background: #fff8fb;
+
+    width: 330px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
     text-align: center;
+
     margin: 15% auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    box-shadow:
+        0 15px 40px rgba(120,60,80,0.25);
+
+    animation: popup 0.25s ease;
 }
 
+@keyframes popup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    color: #c85f86;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #765b66;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ปุ่ม Popup
+========================= */
+
 .popup-btn {
-    margin: 8px;
-    padding: 10px 20px;
+    padding: 10px 24px;
+
     border: none;
-    border-radius: 10px;
+
+    border-radius: 50px;
+
     cursor: pointer;
+
     color: white;
+
+    font-weight: bold;
+
+    margin: 5px;
+
+    transition: 0.2s;
+}
+
+.popup-btn:hover {
+    transform: translateY(-2px);
 }
 
 .confirm {
-    background: #28a745;
+    background: #d982a2;
 }
 
 .cancel {
-    background: #dc3545;
+    background: #c9a5b3;
 }
+
+
+/* =========================
+   Responsive สำหรับมือถือ
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .cover {
+        padding: 40px 22px;
+        border-radius: 28px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .profile-wrapper {
+        width: 145px;
+        height: 145px;
+    }
+
+    .name {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<div class="card">
-    <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</h1>
-    <p>สวัสดีค่ะ! ดิฉันชื่อ <strong>โชติรส คนชม (Chotiros Khonchom)</strong></p>
-    <p>ขณะนี้กำลังศึกษา/สนใจด้าน <strong>Faculty of Law</strong></p>
-    <p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
+<!-- ของตกแต่ง -->
+
+<div class="decor">♡</div>
+<div class="decor">✦</div>
+<div class="decor">♡</div>
+<div class="decor">✦</div>
+
+
+<!-- =========================
+     หน้าปก
+========================= -->
+
+<div class="cover">
+
+    <div class="small-title">
+        WELCOME TO
+    </div>
+
+    <h1>
+        MY PORTFOLIO
+    </h1>
+
+    <div class="subtitle">
+        My Little World ♡
+    </div>
+
+    <div class="line"></div>
+
+
+    <!-- รูปโปรไฟล์ -->
+    <div class="profile-wrapper">
+
+        <img
+            src="IMG_0819.jpeg"
+            alt="รูปโปรไฟล์ของโชติรส คนชม"
+        >
+
+    </div>
+
+
+    <!-- ชื่อ -->
+
+    <div class="name">
+        โชติรส คนชม
+    </div>
+
+    <div class="name-en">
+        Chotiros Khonchom
+    </div>
+
+
+    <!-- คณะ -->
+
+    <div class="faculty">
+        ⚖️ Faculty of Law
+    </div>
+
+
+    <!-- คำแนะนำ -->
+
+    <p class="description">
+        ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงานของฉัน
+        เว็บไซต์เล็ก ๆ ที่รวบรวมเรื่องราว
+        ผลงาน และประสบการณ์ของฉันไว้ที่นี่ ♡
+    </p>
+
+
+    <!-- ปุ่ม -->
+
+    <button class="btn" onclick="openModal()">
+        🚀 Next Page
+    </button>
+
 </div>
 
-<button class="btn" onclick="openModal()">
-    🚀 Next Page
-</button>
+
+<!-- =========================
+     Popup
+========================= -->
 
 <div id="myModal" class="modal">
-    <div class="modal-content">
-        <h3>ไปหน้าถัดไป?</h3>
-        <p>กด "ตกลง" เพื่อเปิดหน้าถัดไป</p>
 
-        <button class="popup-btn confirm" onclick="goNext()">
+    <div class="modal-content">
+
+        <h3>
+            🌸 ไปหน้าถัดไป?
+        </h3>
+
+        <p>
+            กด "ตกลง" เพื่อเข้าสู่ Portfolio
+        </p>
+
+        <button
+            class="popup-btn confirm"
+            onclick="goNext()"
+        >
             ตกลง
         </button>
 
-        <button class="popup-btn cancel" onclick="closeModal()">
+        <button
+            class="popup-btn cancel"
+            onclick="closeModal()"
+        >
             ยกเลิก
         </button>
+
     </div>
+
 </div>
 
+
 <script>
+
+/* เปิด Popup */
+
 function openModal() {
+
     document.getElementById("myModal").style.display = "block";
+
 }
+
+
+/* ปิด Popup */
 
 function closeModal() {
+
     document.getElementById("myModal").style.display = "none";
+
 }
 
+
+/* ไปหน้าถัดไป */
+
 function goNext() {
+
     window.location.href = "portfolio.html";
+
 }
+
+
+/* คลิกพื้นที่ด้านนอกเพื่อปิด Popup */
+
+window.onclick = function(event) {
+
+    const modal = document.getElementById("myModal");
+
+    if (event.target === modal) {
+
+        modal.style.display = "none";
+
+    }
+
+}
+
 </script>
 
 </body>
