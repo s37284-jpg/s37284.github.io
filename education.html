@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Education | Chotiros Khonchom</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #654b58;
+
+    background:
+
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(255,255,255,0.8) 0 45px,
+            transparent 46px
+        ),
+
+        radial-gradient(
+            circle at 92% 80%,
+            rgba(255,255,255,0.65) 0 70px,
+            transparent 71px
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffdce9,
+            #ffeef4,
+            #fbd1e1
+        );
+
+    padding: 30px 18px;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   DECORATION
+========================================= */
+
+.decor {
+
+    position: fixed;
+
+    color: #e58eae;
+
+    font-size: 30px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+}
+
+
+.decor:nth-child(1) {
+    top: 8%;
+    left: 7%;
+}
+
+
+.decor:nth-child(2) {
+    top: 17%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+
+.decor:nth-child(3) {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+
+.decor:nth-child(4) {
+    bottom: 8%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(8deg);
+    }
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.education-card {
+
+    background:
+        rgba(255,255,255,0.88);
+
+    border:
+        3px solid
+        rgba(255,255,255,0.95);
+
+    border-radius: 40px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 22px 60px
+        rgba(190,100,135,0.22);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.small-title {
+
+    text-align: center;
+
+    color: #d889a7;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    color: #c45e84;
+
+    font-size: 46px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #a07887;
+
+    font-size: 17px;
+
+}
+
+
+.line {
+
+    width: 100px;
+
+    height: 4px;
+
+    margin:
+        22px auto 32px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f5b3c9,
+            #d8759b,
+            #f5b3c9
+        );
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin:
+        0 auto 35px;
+
+    color: #765b67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 10px 0;
+
+}
+
+
+/* เส้นตรงกลาง */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 4px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f2b2c8,
+            #d8789d,
+            #f2b2c8
+        );
+
+}
+
+
+/* =========================================
+   TIMELINE ITEM
+========================================= */
+
+.timeline-item {
+
+    width: 50%;
+
+    padding: 0 35px 35px;
+
+    position: relative;
+
+}
+
+
+/* ซ้าย */
+
+.timeline-item.left {
+
+    left: 0;
+
+    text-align: right;
+
+}
+
+
+/* ขวา */
+
+.timeline-item.right {
+
+    left: 50%;
+
+    text-align: left;
+
+}
+
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+.timeline-dot {
+
+    position: absolute;
+
+    top: 20px;
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e994b2,
+            #d46e95
+        );
+
+    border:
+        5px solid white;
+
+    box-shadow:
+        0 4px 12px
+        rgba(200,100,140,0.3);
+
+    z-index: 3;
+
+}
+
+
+/* ตำแหน่งจุดฝั่งซ้าย */
+
+.left .timeline-dot {
+
+    right: -12px;
+
+}
+
+
+/* ตำแหน่งจุดฝั่งขวา */
+
+.right .timeline-dot {
+
+    left: -12px;
+
+}
+
+
+/* =========================================
+   EDUCATION BOX
+========================================= */
+
+.edu-box {
+
+    background:
+        rgba(255,250,252,0.96);
+
+    border:
+        2px solid #f4c5d5;
+
+    border-radius: 25px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(210,120,150,0.11);
+
+    transition:
+        all 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.edu-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4b1c7,
+            #d9789e
+        );
+
+}
+
+
+.edu-box:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(210,110,145,0.2);
+
+    background: #fff4f8;
+
+}
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+.year {
+
+    display: inline-block;
+
+    padding:
+        6px 14px;
+
+    border-radius: 50px;
+
+    background: #ffe1eb;
+
+    color: #bd6283;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================
+   EDUCATION TITLE
+========================================= */
+
+.edu-title {
+
+    color: #bd5d80;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+.edu-school {
+
+    color: #765b67;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+.edu-detail {
+
+    color: #9b7887;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-top: 7px;
+
+}
+
+
+/* =========================================
+   PHOTO AREA
+========================================= */
+
+.school-photo {
+
+    width: 100%;
+
+    height: 150px;
+
+    margin-bottom: 15px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1eb,
+            #f8c8d9
+        );
+
+    border:
+        2px dashed #e8a8bd;
+
+}
+
+
+.school-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   ACADEMIC SECTION
+========================================= */
+
+.section-box {
+
+    margin-top: 25px;
+
+    background:
+        rgba(255,250,252,0.95);
+
+    border:
+        2px solid #f4c5d5;
+
+    border-radius: 27px;
+
+    padding: 28px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 20px
+        rgba(210,120,150,0.11);
+
+}
+
+
+.section-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4b1c7,
+            #d9789e
+        );
+
+}
+
+
+.section-title {
+
+    color: #bd5d80;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   SUBJECT TAGS
+========================================= */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.tag {
+
+    padding:
+        9px 16px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe5ee,
+            #ffd7e5
+        );
+
+    color: #b95f7f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border:
+        1px solid #f2bfd1;
+
+    transition: 0.25s;
+
+}
+
+
+.tag:hover {
+
+    transform:
+        translateY(-3px);
+
+    background: #e997b3;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   GPAX
+========================================= */
+
+.gpax {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    background: #fff0f5;
+
+    border:
+        1px solid #f4c3d3;
+
+}
+
+
+.gpax-label {
+
+    color: #8c6876;
+
+    font-size: 14px;
+
+}
+
+
+.gpax-number {
+
+    color: #c45e84;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   FUTURE GOAL
+========================================= */
+
+.goal {
+
+    margin-top: 25px;
+
+    padding: 28px;
+
+    border-radius: 27px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f6,
+            #ffe0eb
+        );
+
+    border:
+        2px solid #f3bfd1;
+
+    box-shadow:
+        0 8px 22px
+        rgba(210,120,150,0.12);
+
+}
+
+
+.goal-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.goal-title {
+
+    color: #c05e83;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.goal-text {
+
+    color: #765b67;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-wrapper {
+
+    text-align: center;
+
+}
+
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding:
+        14px 32px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eb9ab6,
+            #d56d94
+        );
+
+    box-shadow:
+        0 9px 24px
+        rgba(213,109,148,0.32);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.back-arrow {
+
+    font-size: 23px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.back-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(213,109,148,0.43);
+
+}
+
+
+.back-btn:hover
+.back-arrow {
+
+    transform:
+        translateX(-8px);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #b18c99;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .education-card {
+
+        padding:
+            32px 18px;
+
+        border-radius: 30px;
+
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .timeline::before {
+
+        left: 15px;
+
+    }
+
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+
+        width: 100%;
+
+        left: 0;
+
+        text-align: left;
+
+        padding:
+            0 0 25px 45px;
+
+    }
+
+
+    .left .timeline-dot,
+    .right .timeline-dot {
+
+        left: 3px;
+
+        right: auto;
+
+    }
+
+
+    .edu-box {
+
+        padding: 20px;
+
+    }
+
+
+    .gpax {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     DECORATION
+========================================= -->
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+
+
+<div class="container">
+
+
+<div class="education-card">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<div class="small-title">
+    MY ACADEMIC JOURNEY
+</div>
+
+
+<h1>
+    EDUCATION
+</h1>
+
+
+<div class="subtitle">
+    ประวัติการศึกษา ♡
+</div>
+
+
+<div class="line"></div>
+
+
+<p class="intro">
+
+    เส้นทางการเรียนรู้ของฉัน
+    เต็มไปด้วยประสบการณ์ ความรู้
+    และความพยายามที่ค่อย ๆ พัฒนาตัวเอง
+    เพื่อก้าวไปสู่เป้าหมายในอนาคต 🎓
+
+</p>
+
+
+
+<!-- =========================================
+     TIMELINE
+========================================= -->
+
+<div class="timeline">
+
+
+    <!-- =====================================
+         PRIMARY
+    ====================================== -->
+
+    <div class="timeline-item left">
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="edu-box">
+
+
+            <!-- ถ้ามีรูปโรงเรียน
+                 ใส่ตรงนี้ -->
+
+            <div class="school-photo">
+
+                <img
+                    src="primary-school.jpg"
+                    alt="รูปโรงเรียนระดับประถมศึกษา"
+                >
+
+            </div>
+
+
+            <div class="year">
+                ระดับประถมศึกษา
+            </div>
+
+
+            <div class="edu-title">
+                🏫 ประถมศึกษา
+            </div>
+
+
+            <div class="edu-school">
+
+                <strong>
+                    โรงเรียน :
+                </strong>
+
+                ใส่ชื่อโรงเรียน
+
+            </div>
+
+
+            <div class="edu-detail">
+
+                ปีการศึกษา :
+                ใส่ปีการศึกษา
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         JUNIOR HIGH
+    ====================================== -->
+
+    <div class="timeline-item right">
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="edu-box">
+
+
+            <div class="school-photo">
+
+                <img
+                    src="junior-school.jpg"
+                    alt="รูปโรงเรียนระดับมัธยมศึกษาตอนต้น"
+                >
+
+            </div>
+
+
+            <div class="year">
+                ระดับมัธยมศึกษาตอนต้น
+            </div>
+
+
+            <div class="edu-title">
+                🏫 มัธยมศึกษาตอนต้น
+            </div>
+
+
+            <div class="edu-school">
+
+                <strong>
+                    โรงเรียน :
+                </strong>
+
+                ใส่ชื่อโรงเรียน
+
+            </div>
+
+
+            <div class="edu-detail">
+
+                ปีการศึกษา :
+                ใส่ปีการศึกษา
+
+            </div>
+
+
+            <div class="gpax">
+
+                <span class="gpax-label">
+                    📊 ผลการเรียนเฉลี่ย
+                </span>
+
+                <span class="gpax-number">
+                    0.00
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         SENIOR HIGH
+    ====================================== -->
+
+    <div class="timeline-item left">
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="edu-box">
+
+
+            <div class="school-photo">
+
+                <img
+                    src="high-school.jpg"
+                    alt="รูปโรงเรียนระดับมัธยมศึกษาตอนปลาย"
+                >
+
+            </div>
+
+
+            <div class="year">
+                ระดับมัธยมศึกษาตอนปลาย
+            </div>
+
+
+            <div class="edu-title">
+                🎓 มัธยมศึกษาตอนปลาย
+            </div>
+
+
+            <div class="edu-school">
+
+                <strong>
+                    โรงเรียน :
+                </strong>
+
+                ใส่ชื่อโรงเรียน
+
+            </div>
+
+
+            <div class="edu-detail">
+
+                <strong>
+                    ระดับชั้น :
+                </strong>
+
+                ม.ปลาย<br>
+
+                <strong>
+                    แผนการเรียน :
+                </strong>
+
+                ใส่แผนการเรียน / สายการเรียน
+
+            </div>
+
+
+            <div class="gpax">
+
+                <span class="gpax-label">
+                    📊 GPAX
+                </span>
+
+                <span class="gpax-number">
+                    0.00
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     SUBJECTS & SKILLS
+========================================= -->
+
+<div class="section-box">
+
+
+    <div class="section-title">
+        📚 วิชาที่สนใจและทักษะ
+    </div>
+
+
+    <div class="tags">
+
+        <span class="tag">
+            ⚖️ กฎหมาย
+        </span>
+
+        <span class="tag">
+            🇬🇧 ภาษาอังกฤษ
+        </span>
+
+        <span class="tag">
+            💻 คอมพิวเตอร์
+        </span>
+
+        <span class="tag">
+            🎤 การนำเสนอ
+        </span>
+
+        <span class="tag">
+            🗣️ การสื่อสาร
+        </span>
+
+        <span class="tag">
+            🤝 การทำงานเป็นทีม
+        </span>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     EDUCATION GOAL
+========================================= -->
+
+<div class="goal">
+
+
+    <div class="goal-icon">
+        🌟
+    </div>
+
+
+    <div class="goal-title">
+        เป้าหมายด้านการศึกษา
+    </div>
+
+
+    <div class="goal-text">
+
+        มีเป้าหมายศึกษาต่อด้านนิติศาสตร์
+        เพื่อพัฒนาความรู้และทักษะด้านกฎหมาย
+        และนำความรู้ที่ได้รับไปต่อยอด
+        เพื่อสร้างประโยชน์ให้แก่ตนเองและสังคม
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
+<div class="back-wrapper">
+
+    <a
+        href="portfolio.html"
+        class="back-btn"
+    >
+
+        <span class="back-arrow">
+            ←
+        </span>
+
+        BACK TO PORTFOLIO
+
+    </a>
+
+</div>
+
+
+
+<div class="footer">
+
+    Made with ♡ by Chotiros Khonchom
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>
