@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>My Works | Chotiros Khonchom</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #654b58;
+
+    background:
+
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(255,255,255,0.8) 0 45px,
+            transparent 46px
+        ),
+
+        radial-gradient(
+            circle at 92% 80%,
+            rgba(255,255,255,0.65) 0 70px,
+            transparent 71px
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffdce9,
+            #ffeef4,
+            #fbd1e1
+        );
+
+    padding: 30px 18px;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   DECORATION
+========================================= */
+
+.decor {
+
+    position: fixed;
+
+    color: #e58eae;
+
+    font-size: 30px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+}
+
+
+.decor:nth-child(1) {
+    top: 8%;
+    left: 7%;
+}
+
+
+.decor:nth-child(2) {
+    top: 17%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+
+.decor:nth-child(3) {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+
+.decor:nth-child(4) {
+    bottom: 8%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.works-card {
+
+    background:
+        rgba(255,255,255,0.88);
+
+    border:
+        3px solid
+        rgba(255,255,255,0.95);
+
+    border-radius: 40px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 22px 60px
+        rgba(190,100,135,0.22);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.small-title {
+
+    text-align: center;
+
+    color: #d889a7;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    color: #c45e84;
+
+    font-size: 46px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #a07887;
+
+    font-size: 17px;
+
+}
+
+
+.line {
+
+    width: 100px;
+
+    height: 4px;
+
+    margin:
+        22px auto 28px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f5b3c9,
+            #d8759b,
+            #f5b3c9
+        );
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 35px;
+
+    text-align: center;
+
+    color: #765b67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   WORK
+========================================= */
+
+.work {
+
+    background:
+        rgba(255,250,252,0.95);
+
+    border:
+        2px solid #f4c5d5;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    margin-bottom: 28px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(210,120,150,0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.work:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(210,110,145,0.23);
+
+}
+
+
+/* =========================================
+   WORK IMAGE
+========================================= */
+
+.work-image {
+
+    width: 100%;
+
+    height: 280px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1eb,
+            #f8c8d9
+        );
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.work-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.work:hover
+.work-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =========================================
+   IMAGE NUMBER
+========================================= */
+
+.work-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    padding:
+        8px 16px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    color: #bd5d80;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(160,80,110,0.15);
+
+}
+
+
+/* =========================================
+   WORK CONTENT
+========================================= */
+
+.work-content {
+
+    padding: 27px;
+
+}
+
+
+.work-label {
+
+    color: #d07b99;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.work-title {
+
+    color: #bd5d80;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.work-description {
+
+    color: #765b67;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =========================================
+   SKILLS / TAGS
+========================================= */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.tag {
+
+    padding:
+        7px 13px;
+
+    border-radius: 50px;
+
+    background: #ffe4ed;
+
+    border:
+        1px solid #f3c0d1;
+
+    color: #b85f7f;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   WHAT I LEARNED
+========================================= */
+
+.learn {
+
+    padding:
+        15px 18px;
+
+    border-radius: 17px;
+
+    background:
+        #fff1f6;
+
+    border-left:
+        5px solid #e697b3;
+
+}
+
+
+.learn-title {
+
+    color: #bd6283;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+
+.learn-text {
+
+    color: #806573;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   PROJECT 2 SPECIAL STYLE
+========================================= */
+
+.work.second {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,250,252,0.98),
+            rgba(255,239,245,0.98)
+        );
+
+}
+
+
+/* =========================================
+   WORK FOOTER
+========================================= */
+
+.work-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+}
+
+
+.work-date {
+
+    color: #aa8190;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.view-btn {
+
+    display: inline-block;
+
+    padding:
+        9px 18px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e99ab5,
+            #d56d94
+        );
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(213,109,148,0.25);
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.view-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(213,109,148,0.35);
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-wrapper {
+
+    text-align: center;
+
+}
+
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+
+    padding:
+        14px 32px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eb9ab6,
+            #d56d94
+        );
+
+    box-shadow:
+        0 9px 24px
+        rgba(213,109,148,0.32);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.back-arrow {
+
+    font-size: 23px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.back-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(213,109,148,0.43);
+
+}
+
+
+.back-btn:hover
+.back-arrow {
+
+    transform:
+        translateX(-8px);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #b18c99;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    body {
+
+        padding:
+            15px 10px;
+
+    }
+
+
+    .works-card {
+
+        padding:
+            32px 18px;
+
+        border-radius: 30px;
+
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .work-image {
+
+        height: 210px;
+
+    }
+
+
+    .work-content {
+
+        padding: 21px;
+
+    }
+
+
+    .work-title {
+
+        font-size: 21px;
+
+    }
+
+
+    .work-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     DECORATION
+========================================= -->
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+
+
+<div class="container">
+
+
+<div class="works-card">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<div class="small-title">
+    MY CREATIVE JOURNEY
+</div>
+
+
+<h1>
+    MY WORKS
+</h1>
+
+
+<div class="subtitle">
+    ผลงานของฉัน ♡
+</div>
+
+
+<div class="line"></div>
+
+
+<p class="intro">
+
+    ผลงานแต่ละชิ้นเป็นส่วนหนึ่งของการเรียนรู้
+    ความพยายาม และประสบการณ์ที่ได้พัฒนาตนเอง
+    พร้อมก้าวไปสู่เป้าหมายในอนาคต ✨
+
+</p>
+
+
+
+<!-- =========================================
+     WORK 01
+========================================= -->
+
+<div class="work">
+
+
+    <!-- รูปผลงานที่ 1 -->
+
+    <div class="work-image">
+
+        <img
+            src="work1.jpg"
+            alt="ผลงานที่ 1"
+        >
+
+        <div class="work-number">
+            01 • FEATURED WORK
+        </div>
+
+    </div>
+
+
+    <!-- รายละเอียด -->
+
+    <div class="work-content">
+
+
+        <div class="work-label">
+            PROJECT 01
+        </div>
+
+
+        <!-- เปลี่ยนชื่อผลงาน -->
+
+        <div class="work-title">
+            ชื่อผลงานที่ 1
+        </div>
+
+
+        <!-- เปลี่ยนรายละเอียด -->
+
+        <div class="work-description">
+
+            ใส่รายละเอียดเกี่ยวกับผลงานที่ 1
+            เช่น เป็นผลงานเกี่ยวกับอะไร
+            ทำขึ้นในโอกาสใด
+            และมีหน้าที่หรือบทบาทอะไรในผลงานนี้
+
+        </div>
+
+
+        <!-- Tags -->
+
+        <div class="tags">
+
+            <span class="tag">
+                ✦ Creative
+            </span>
+
+            <span class="tag">
+                🎨 Design
+            </span>
+
+            <span class="tag">
+                🤝 Teamwork
+            </span>
+
+        </div>
+
+
+        <!-- สิ่งที่ได้รับ -->
+
+        <div class="learn">
+
+            <div class="learn-title">
+                🌷 สิ่งที่ได้รับจากผลงาน
+            </div>
+
+            <div class="learn-text">
+
+                ได้ฝึกทักษะการทำงาน
+                การคิดสร้างสรรค์
+                การแก้ไขปัญหา
+                และการทำงานร่วมกับผู้อื่น
+
+            </div>
+
+        </div>
+
+
+        <div class="work-footer">
+
+            <div class="work-date">
+                📅 ปีการศึกษา : ............
+            </div>
+
+
+            <!-- ถ้าไม่มีหน้ารายละเอียด
+                 ลบปุ่มนี้ออกได้ -->
+
+            <a
+                href="#"
+                class="view-btn"
+            >
+                VIEW PROJECT →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     WORK 02
+========================================= -->
+
+<div class="work second">
+
+
+    <!-- รูปผลงานที่ 2 -->
+
+    <div class="work-image">
+
+        <img
+            src="work2.jpg"
+            alt="ผลงานที่ 2"
+        >
+
+        <div class="work-number">
+            02 • FEATURED WORK
+        </div>
+
+    </div>
+
+
+    <!-- รายละเอียด -->
+
+    <div class="work-content">
+
+
+        <div class="work-label">
+            PROJECT 02
+        </div>
+
+
+        <!-- เปลี่ยนชื่อผลงาน -->
+
+        <div class="work-title">
+            ชื่อผลงานที่ 2
+        </div>
+
+
+        <!-- เปลี่ยนรายละเอียด -->
+
+        <div class="work-description">
+
+            ใส่รายละเอียดเกี่ยวกับผลงานที่ 2
+            เช่น แนวคิดของผลงาน
+            ขั้นตอนการทำงาน
+            และบทบาทของตนเองในการสร้างผลงาน
+
+        </div>
+
+
+        <!-- Tags -->
+
+        <div class="tags">
+
+            <span class="tag">
+                ✨ Creativity
+            </span>
+
+            <span class="tag">
+                💻 Technology
+            </span>
+
+            <span class="tag">
+                💡 Problem Solving
+            </span>
+
+        </div>
+
+
+        <!-- สิ่งที่ได้รับ -->
+
+        <div class="learn">
+
+            <div class="learn-title">
+                🌷 สิ่งที่ได้รับจากผลงาน
+            </div>
+
+            <div class="learn-text">
+
+                ได้เรียนรู้การวางแผน
+                การรับผิดชอบหน้าที่
+                การทำงานอย่างเป็นระบบ
+                และการนำความรู้มาประยุกต์ใช้
+
+            </div>
+
+        </div>
+
+
+        <div class="work-footer">
+
+            <div class="work-date">
+                📅 ปีการศึกษา : ............
+            </div>
+
+
+            <a
+                href="#"
+                class="view-btn"
+            >
+                VIEW PROJECT →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
+<div class="back-wrapper">
+
+    <a
+        href="portfolio.html"
+        class="back-btn"
+    >
+
+        <span class="back-arrow">
+            ←
+        </span>
+
+        BACK TO PORTFOLIO
+
+    </a>
+
+</div>
+
+
+
+<div class="footer">
+
+    Made with ♡ by Chotiros Khonchom
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>
