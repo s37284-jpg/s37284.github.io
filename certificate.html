@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Certificates | Chotiros Khonchom</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #654b58;
+
+    padding: 30px 18px;
+
+    overflow-x: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(255,255,255,0.9) 0 45px,
+            transparent 46px
+        ),
+
+        radial-gradient(
+            circle at 92% 82%,
+            rgba(255,255,255,0.75) 0 70px,
+            transparent 71px
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffdbe9,
+            #fff0f5,
+            #f8ccdd
+        );
+
+}
+
+
+/* =========================================
+   FLOATING DECORATION
+========================================= */
+
+.decor {
+
+    position: fixed;
+
+    color: #d982a3;
+
+    font-size: 30px;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+}
+
+
+.decor:nth-child(1) {
+
+    top: 8%;
+    left: 7%;
+
+}
+
+
+.decor:nth-child(2) {
+
+    top: 18%;
+    right: 8%;
+
+    animation-delay: 1s;
+
+}
+
+
+.decor:nth-child(3) {
+
+    bottom: 17%;
+    left: 8%;
+
+    animation-delay: 2s;
+
+}
+
+
+.decor:nth-child(4) {
+
+    bottom: 8%;
+    right: 10%;
+
+    animation-delay: 1.5s;
+
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.main-card {
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border:
+        3px solid
+        rgba(255,255,255,0.95);
+
+    border-radius: 40px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 22px 60px
+        rgba(190,100,135,0.22);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.small-title {
+
+    text-align: center;
+
+    color: #d889a7;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    color: #c45e84;
+
+    font-size: 46px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #a07887;
+
+    font-size: 17px;
+
+}
+
+
+.line {
+
+    width: 110px;
+
+    height: 4px;
+
+    margin:
+        22px auto 28px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f5b3c9,
+            #d8759b,
+            #f5b3c9
+        );
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 40px;
+
+    text-align: center;
+
+    color: #765b67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   CERTIFICATE GRID
+========================================= */
+
+.certificate-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 28px;
+
+}
+
+
+/* =========================================
+   CERTIFICATE CARD
+========================================= */
+
+.certificate {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffafd,
+            #fff0f5
+        );
+
+    border:
+        2px solid #f1bfd1;
+
+    border-radius: 28px;
+
+    padding: 16px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,100,135,0.14);
+
+    transition:
+        all 0.4s ease;
+
+}
+
+
+.certificate:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.01);
+
+    box-shadow:
+        0 20px 40px
+        rgba(190,90,130,0.25);
+
+}
+
+
+/* =========================================
+   CERTIFICATE IMAGE AREA
+========================================= */
+
+.certificate-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1.414 / 1;
+
+    border-radius: 19px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe2ec,
+            #f7c8da
+        );
+
+    border:
+        5px solid white;
+
+    box-shadow:
+        0 5px 18px
+        rgba(160,80,110,0.15);
+
+}
+
+
+.certificate-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.certificate:hover
+.certificate-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.badge {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    padding:
+        7px 13px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    color: #bd5d80;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 12px
+        rgba(150,70,100,0.15);
+
+}
+
+
+/* =========================================
+   CERTIFICATE CONTENT
+========================================= */
+
+.certificate-content {
+
+    padding:
+        20px 8px 8px;
+
+}
+
+
+.certificate-number {
+
+    color: #d17b99;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.certificate-title {
+
+    color: #bd5d80;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    margin-bottom: 13px;
+
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.info-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        8px 11px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.8);
+
+    color: #806573;
+
+    font-size: 12px;
+
+}
+
+
+.info-icon {
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   ACHIEVEMENT
+========================================= */
+
+.achievement {
+
+    padding:
+        13px 15px;
+
+    border-radius: 15px;
+
+    background:
+        #fff1f6;
+
+    border-left:
+        4px solid #df91ad;
+
+}
+
+
+.achievement-title {
+
+    color: #bd6283;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 4px;
+
+}
+
+
+.achievement-text {
+
+    color: #806573;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   GOLD STAR
+========================================= */
+
+.star {
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-wrapper {
+
+    text-align: center;
+
+    margin-top: 35px;
+
+}
+
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+        14px 32px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eb9ab6,
+            #d56d94
+        );
+
+    box-shadow:
+        0 9px 24px
+        rgba(213,109,148,0.32);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.arrow {
+
+    font-size: 23px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.back-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(213,109,148,0.43);
+
+}
+
+
+.back-btn:hover .arrow {
+
+    transform:
+        translateX(-8px);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #b18c99;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .certificate-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .main-card {
+
+        padding:
+            32px 18px;
+
+        border-radius: 30px;
+
+    }
+
+
+    h1 {
+
+        font-size: 35px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding:
+            15px 10px;
+
+    }
+
+
+    .certificate-content {
+
+        padding:
+            18px 5px 5px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     DECORATION
+========================================= -->
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+<div class="decor">♡</div>
+
+<div class="decor">✦</div>
+
+
+
+<div class="container">
+
+
+<div class="main-card">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<div class="small-title">
+    CERTIFICATES & AWARDS
+</div>
+
+
+<h1>
+    MY ACHIEVEMENTS
+</h1>
+
+
+<div class="subtitle">
+    เกียรติบัตรของฉัน 🏆
+</div>
+
+
+<div class="line"></div>
+
+
+<p class="intro">
+
+    เกียรติบัตรเหล่านี้เป็นส่วนหนึ่งของ
+    ความพยายามและประสบการณ์ที่ได้รับ
+    จากการเรียนรู้และการเข้าร่วมกิจกรรมต่าง ๆ ✨
+
+</p>
+
+
+
+<!-- =========================================
+     CERTIFICATES
+========================================= -->
+
+<div class="certificate-grid">
+
+
+
+<!-- =========================================
+     CERTIFICATE 01
+========================================= -->
+
+<div class="certificate">
+
+
+    <div class="certificate-image">
+
+        <img
+            src="certificate1.jpg"
+            alt="เกียรติบัตรที่ 1"
+        >
+
+        <div class="badge">
+            🏆 CERTIFICATE 01
+        </div>
+
+    </div>
+
+
+    <div class="certificate-content">
+
+
+        <div class="certificate-number">
+            ACHIEVEMENT 01
+        </div>
+
+
+        <!-- ชื่อเกียรติบัตร -->
+
+        <div class="certificate-title">
+
+            ชื่อเกียรติบัตรที่ 1
+
+        </div>
+
+
+        <!-- ข้อมูล -->
+
+        <div class="info">
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    📅
+                </span>
+
+                วันที่ได้รับ :
+                ....................
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    🏫
+                </span>
+
+                หน่วยงาน :
+                ....................
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    ⭐
+                </span>
+
+                ประเภท :
+                ....................
+
+            </div>
+
+
+        </div>
+
+
+        <!-- สิ่งที่ได้รับ -->
+
+        <div class="achievement">
+
+            <div class="achievement-title">
+                ✦ รายละเอียด
+            </div>
+
+            <div class="achievement-text">
+
+                ใส่รายละเอียดของเกียรติบัตร
+                หรือสิ่งที่ได้รับจากการเข้าร่วมกิจกรรมนี้
+
+            </div>
+
+        </div>
+
+
+        <div class="star">
+            ✦ ✦ ✦
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     CERTIFICATE 02
+========================================= -->
+
+<div class="certificate">
+
+
+    <div class="certificate-image">
+
+        <img
+            src="certificate2.jpg"
+            alt="เกียรติบัตรที่ 2"
+        >
+
+        <div class="badge">
+            🏆 CERTIFICATE 02
+        </div>
+
+    </div>
+
+
+    <div class="certificate-content">
+
+
+        <div class="certificate-number">
+            ACHIEVEMENT 02
+        </div>
+
+
+        <!-- ชื่อเกียรติบัตร -->
+
+        <div class="certificate-title">
+
+            ชื่อเกียรติบัตรที่ 2
+
+        </div>
+
+
+        <!-- ข้อมูล -->
+
+        <div class="info">
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    📅
+                </span>
+
+                วันที่ได้รับ :
+                ....................
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    🏫
+                </span>
+
+                หน่วยงาน :
+                ....................
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-icon">
+                    ⭐
+                </span>
+
+                ประเภท :
+                ....................
+
+            </div>
+
+
+        </div>
+
+
+        <!-- สิ่งที่ได้รับ -->
+
+        <div class="achievement">
+
+            <div class="achievement-title">
+                ✦ รายละเอียด
+            </div>
+
+            <div class="achievement-text">
+
+                ใส่รายละเอียดของเกียรติบัตร
+                หรือสิ่งที่ได้รับจากการเข้าร่วมกิจกรรมนี้
+
+            </div>
+
+        </div>
+
+
+        <div class="star">
+            ✦ ✦ ✦
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
+<div class="back-wrapper">
+
+    <a
+        href="portfolio.html"
+        class="back-btn"
+    >
+
+        <span class="arrow">
+            ←
+        </span>
+
+        BACK TO PORTFOLIO
+
+    </a>
+
+</div>
+
+
+<div class="footer">
+
+    Made with ♡ by Chotiros Khonchom
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>
