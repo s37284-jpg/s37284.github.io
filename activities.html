@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>My Activities | Chotiros Khonchom</title>
+<title>My Education | Chotiros Khonchom</title>
 
 
 <style>
@@ -171,7 +171,7 @@ body {
    MAIN CARD
 ========================================= */
 
-.activities-card {
+.education-card {
 
     background:
         rgba(255,255,255,0.9);
@@ -286,10 +286,10 @@ h1 {
 
 
 /* =========================================
-   ACTIVITY
+   EDUCATION
 ========================================= */
 
-.activity {
+.education {
 
     position: relative;
 
@@ -300,9 +300,9 @@ h1 {
 }
 
 
-/* เส้น Timeline */
+/* Timeline */
 
-.activity::before {
+.education::before {
 
     content: "";
 
@@ -328,7 +328,7 @@ h1 {
 }
 
 
-.activity:last-child::before {
+.education:last-child::before {
 
     display: none;
 
@@ -339,7 +339,7 @@ h1 {
    NUMBER
 ========================================= */
 
-.activity-number {
+.education-number {
 
     position: absolute;
 
@@ -385,10 +385,10 @@ h1 {
 
 
 /* =========================================
-   ACTIVITY CARD
+   EDUCATION BOX
 ========================================= */
 
-.activity-card {
+.education-box {
 
     background:
         rgba(255,250,252,0.98);
@@ -398,7 +398,7 @@ h1 {
 
     border-radius: 30px;
 
-    overflow: hidden;
+    padding: 28px;
 
     box-shadow:
         0 9px 25px
@@ -410,7 +410,7 @@ h1 {
 }
 
 
-.activity-card:hover {
+.education-box:hover {
 
     transform:
         translateY(-8px);
@@ -423,97 +423,10 @@ h1 {
 
 
 /* =========================================
-   ACTIVITY IMAGE
+   LEVEL
 ========================================= */
 
-.activity-image {
-
-    height: 300px;
-
-    width: 100%;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffe2ec,
-            #f8c9da
-        );
-
-}
-
-
-.activity-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.6s ease;
-
-}
-
-
-.activity-card:hover
-.activity-image img {
-
-    transform:
-        scale(1.06);
-
-}
-
-
-/* =========================================
-   IMAGE LABEL
-========================================= */
-
-.image-label {
-
-    position: absolute;
-
-    top: 18px;
-
-    left: 18px;
-
-    padding:
-        8px 15px;
-
-    border-radius: 50px;
-
-    background:
-        rgba(255,255,255,0.9);
-
-    color: #bd5d80;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    box-shadow:
-        0 5px 15px
-        rgba(160,80,110,0.15);
-
-}
-
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.activity-content {
-
-    padding: 28px;
-
-}
-
-
-.activity-label {
+.education-label {
 
     color: #d17b99;
 
@@ -528,11 +441,15 @@ h1 {
 }
 
 
-.activity-title {
+/* =========================================
+   SCHOOL
+========================================= */
+
+.education-title {
 
     color: #bd5d80;
 
-    font-size: 26px;
+    font-size: 25px;
 
     font-weight: bold;
 
@@ -580,75 +497,13 @@ h1 {
 
 
 /* =========================================
-   DESCRIPTION
+   GPAX
 ========================================= */
 
-.description {
-
-    color: #765b67;
-
-    font-size: 14px;
-
-    line-height: 1.9;
-
-    margin-bottom: 20px;
-
-}
-
-
-/* =========================================
-   ROLE
-========================================= */
-
-.role {
+.gpax {
 
     padding:
         16px 18px;
-
-    border-radius: 18px;
-
-    background: #fff1f6;
-
-    border-left:
-        5px solid #e596b1;
-
-    margin-bottom: 15px;
-
-}
-
-
-.role-title {
-
-    color: #bd6283;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    margin-bottom: 5px;
-
-}
-
-
-.role-text {
-
-    color: #806573;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
-}
-
-
-/* =========================================
-   LEARNING
-========================================= */
-
-.learning {
-
-    padding:
-        18px;
 
     border-radius: 18px;
 
@@ -665,7 +520,7 @@ h1 {
 }
 
 
-.learning-title {
+.gpax-title {
 
     color: #bd6283;
 
@@ -678,49 +533,11 @@ h1 {
 }
 
 
-.learning-text {
+.gpax-number {
 
-    color: #806573;
+    color: #c45e84;
 
-    font-size: 13px;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================================
-   SKILLS
-========================================= */
-
-.skills {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 18px;
-
-}
-
-
-.skill {
-
-    padding:
-        7px 13px;
-
-    border-radius: 50px;
-
-    background: white;
-
-    color: #b76181;
-
-    border:
-        1px solid #efbfd0;
-
-    font-size: 11px;
+    font-size: 28px;
 
     font-weight: bold;
 
@@ -842,7 +659,7 @@ h1 {
     }
 
 
-    .activities-card {
+    .education-card {
 
         padding:
             32px 18px;
@@ -859,30 +676,30 @@ h1 {
     }
 
 
-    .activity {
+    .education {
 
         padding-left: 30px;
 
     }
 
 
-    .activity-image {
+    .education-number {
 
-        height: 220px;
-
-    }
-
-
-    .activity-content {
-
-        padding: 21px;
+        left: -7px;
 
     }
 
 
-    .activity-title {
+    .education-title {
 
         font-size: 21px;
+
+    }
+
+
+    .education-box {
+
+        padding: 21px;
 
     }
 
@@ -913,7 +730,7 @@ h1 {
 <div class="container">
 
 
-<div class="activities-card">
+<div class="education-card">
 
 
 <!-- =========================================
@@ -921,164 +738,85 @@ h1 {
 ========================================= -->
 
 <div class="small-title">
-    MOMENTS & EXPERIENCES
+    MY ACADEMIC JOURNEY
 </div>
 
 
 <h1>
-    MY ACTIVITIES
+    MY EDUCATION
 </h1>
 
 
 <div class="subtitle">
-    กิจกรรมของฉัน ♡
+    ประวัติการศึกษาของฉัน ♡
 </div>
 
 
 <div class="line"></div>
 
 
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
 <p class="intro">
 
-    ทุกกิจกรรมคือประสบการณ์ใหม่
-    ที่ช่วยให้ฉันได้เรียนรู้
-    พัฒนาทักษะ และค้นพบความสามารถ
-    ของตัวเองมากขึ้น 🌷
+    เส้นทางการศึกษาที่หล่อหลอมประสบการณ์
+    ความรู้ และทักษะต่าง ๆ
+    เพื่อเตรียมพร้อมสำหรับการก้าวไปสู่อนาคต
+    และเป้าหมายที่ตั้งใจไว้ 🌷
 
 </p>
 
 
 
 <!-- =========================================
-     ACTIVITY 01
+     EDUCATION 01
 ========================================= -->
 
-<div class="activity">
+<div class="education">
 
 
-    <div class="activity-number">
+    <div class="education-number">
         01
     </div>
 
 
-    <div class="activity-card">
+    <div class="education-box">
 
 
-        <!-- รูปกิจกรรมที่ 1 -->
+        <div class="education-label">
+            MIDDLE SCHOOL
+        </div>
 
-        <div class="activity-image">
 
-            <img
-                src="activity1.jpg"
-                alt="กิจกรรมที่ 1"
-            >
+        <div class="education-title">
+            🏫 โรงเรียนประทีปวิทยาคาร
+        </div>
 
-            <div class="image-label">
-                ACTIVITY 01
-            </div>
+
+        <div class="meta">
+
+            <span>
+                📅 ปีการศึกษา : 2564 – 2567
+            </span>
 
         </div>
 
 
-        <div class="activity-content">
+        <div class="gpax">
 
-
-            <div class="activity-label">
-                FEATURED ACTIVITY
+            <div class="gpax-title">
+                📊 ผลการเรียนเฉลี่ย (GPAX)
             </div>
 
-
-            <!-- ชื่อกิจกรรม -->
-
-            <div class="activity-title">
-                ชื่อกิจกรรมที่ 1
+            <div class="gpax-number">
+                3.97
             </div>
-
-
-            <!-- วัน / สถานที่ -->
-
-            <div class="meta">
-
-                <span>
-                    📅 วันที่ : ............
-                </span>
-
-                <span>
-                    📍 สถานที่ : ............
-                </span>
-
-            </div>
-
-
-            <!-- รายละเอียด -->
-
-            <div class="description">
-
-                ใส่รายละเอียดกิจกรรมที่ 1
-                เช่น กิจกรรมนี้จัดขึ้นเพื่ออะไร
-                มีขั้นตอนหรือรูปแบบการทำกิจกรรมอย่างไร
-                และเราได้มีส่วนร่วมอย่างไร
-
-            </div>
-
-
-            <!-- บทบาท -->
-
-            <div class="role">
-
-                <div class="role-title">
-                    ✨ บทบาทของฉัน
-                </div>
-
-                <div class="role-text">
-
-                    ใส่หน้าที่หรือบทบาท
-                    ที่ได้รับมอบหมายในกิจกรรมนี้
-
-                </div>
-
-            </div>
-
-
-            <!-- สิ่งที่ได้รับ -->
-
-            <div class="learning">
-
-                <div class="learning-title">
-                    🌷 สิ่งที่ได้รับ
-                </div>
-
-                <div class="learning-text">
-
-                    ได้ฝึกการทำงานร่วมกับผู้อื่น
-                    การสื่อสาร การแก้ไขปัญหา
-                    และความรับผิดชอบ
-
-                </div>
-
-            </div>
-
-
-            <!-- Skills -->
-
-            <div class="skills">
-
-                <span class="skill">
-                    🤝 Teamwork
-                </span>
-
-                <span class="skill">
-                    🎤 Communication
-                </span>
-
-                <span class="skill">
-                    💡 Problem Solving
-                </span>
-
-            </div>
-
 
         </div>
+
 
     </div>
 
@@ -1087,135 +825,51 @@ h1 {
 
 
 <!-- =========================================
-     ACTIVITY 02
+     EDUCATION 02
 ========================================= -->
 
-<div class="activity">
+<div class="education">
 
 
-    <div class="activity-number">
+    <div class="education-number">
         02
     </div>
 
 
-    <div class="activity-card">
+    <div class="education-box">
 
 
-        <!-- รูปกิจกรรมที่ 2 -->
+        <div class="education-label">
+            HIGH SCHOOL
+        </div>
 
-        <div class="activity-image">
 
-            <img
-                src="activity2.jpg"
-                alt="กิจกรรมที่ 2"
-            >
+        <div class="education-title">
+            🎓 โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+        </div>
 
-            <div class="image-label">
-                ACTIVITY 02
-            </div>
+
+        <div class="meta">
+
+            <span>
+                📅 ปีการศึกษา : 2567 – 2570
+            </span>
 
         </div>
 
 
-        <div class="activity-content">
+        <div class="gpax">
 
-
-            <div class="activity-label">
-                FEATURED ACTIVITY
+            <div class="gpax-title">
+                📊 ผลการเรียนเฉลี่ย (GPAX)
             </div>
 
-
-            <!-- ชื่อกิจกรรม -->
-
-            <div class="activity-title">
-                ชื่อกิจกรรมที่ 2
+            <div class="gpax-number">
+                3.35
             </div>
-
-
-            <!-- วัน / สถานที่ -->
-
-            <div class="meta">
-
-                <span>
-                    📅 วันที่ : ............
-                </span>
-
-                <span>
-                    📍 สถานที่ : ............
-                </span>
-
-            </div>
-
-
-            <!-- รายละเอียด -->
-
-            <div class="description">
-
-                ใส่รายละเอียดกิจกรรมที่ 2
-                เช่น จุดประสงค์ของกิจกรรม
-                สิ่งที่ได้ทำ
-                และประสบการณ์ที่ได้รับ
-
-            </div>
-
-
-            <!-- บทบาท -->
-
-            <div class="role">
-
-                <div class="role-title">
-                    ✨ บทบาทของฉัน
-                </div>
-
-                <div class="role-text">
-
-                    ใส่หน้าที่หรือบทบาท
-                    ที่ได้รับมอบหมายในกิจกรรมนี้
-
-                </div>
-
-            </div>
-
-
-            <!-- สิ่งที่ได้รับ -->
-
-            <div class="learning">
-
-                <div class="learning-title">
-                    🌷 สิ่งที่ได้รับ
-                </div>
-
-                <div class="learning-text">
-
-                    ได้พัฒนาทักษะการทำงาน
-                    การวางแผน การรับผิดชอบ
-                    และการทำงานร่วมกับผู้อื่น
-
-                </div>
-
-            </div>
-
-
-            <!-- Skills -->
-
-            <div class="skills">
-
-                <span class="skill">
-                    ✨ Creativity
-                </span>
-
-                <span class="skill">
-                    📋 Planning
-                </span>
-
-                <span class="skill">
-                    🤝 Teamwork
-                </span>
-
-            </div>
-
 
         </div>
+
 
     </div>
 
